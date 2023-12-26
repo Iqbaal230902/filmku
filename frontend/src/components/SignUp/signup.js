@@ -1,6 +1,5 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import API from "../../API/API";
 
 // Components
 import Button from "../Button";
@@ -9,7 +8,6 @@ import Button from "../Button";
 import { Wrapper } from "./signup.styles";
 
 // Context
-import { Context } from "../../context/context";
 
 const Signup = () => {
     const [username, setUsername] = useState("");
@@ -21,7 +19,7 @@ const Signup = () => {
         setError(false);
 
         try {
-            const response = await fetch('http://localhost:5000/api/signup', {
+            const response = await fetch('https://filmku-nine.vercel.app/api/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
