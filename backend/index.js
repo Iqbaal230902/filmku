@@ -16,7 +16,7 @@ const userSchema = new mongoose.Schema({
 const User = mongoose.model('User', userSchema);
 
 app.use(cors({
-    origin: "*",
+    origin: "https://filmku-frontend.vercel.app",
     credentials: true,
 }));
 
