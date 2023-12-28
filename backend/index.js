@@ -37,7 +37,7 @@ app.post('/api/signup', async (req, res) => {
         res.status(201).json({ message: 'User created successfully' });
     } catch (error) {
         console.error(error);
-        res.status(500).json({ error: 'Internal server error' });
+        res.status(500).json({ error: 'Internal server error', message: `${error}` });
     }
 });
 
@@ -56,7 +56,7 @@ app.post('/api/login', async (req, res) => {
         res.status(200).json({ session_id });
     } catch (error) {
         console.error(error);
-        res.status(500).json({ error: 'Internal server error' });
+        res.status(500).json({ error: 'Internal server error', message: `${error}` });
     }
 });
 
